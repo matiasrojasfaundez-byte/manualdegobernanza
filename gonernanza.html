@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gobernanza Corporativa de IA - Marco Integrado</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --text-color: #2d3748;
+            --bg-light: #f7fafc;
+            --border-color: #cbd5e0;
+            --danger-color: #e53e3e;
+            --danger-bg: #fff5f5;
+            --warning-color: #dd6b20;
+            --warning-bg: #fffaf0;
+            --code-bg: #2d3748;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+        }
+
+        /* Navegación y Estructura */
+        nav {
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+
+        nav h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin-bottom: 8px;
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .document-container {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 3px double var(--border-color);
+        }
+
+        /* Tipografía */
+        h1 {
+            color: var(--primary-color);
+            font-size: 26px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 12px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 20px;
+            margin-top: 35px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #4a5568;
+            font-size: 16px;
+            margin-top: 25px;
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            font-weight: 600;
+            text-align: left;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+
+        /* Listas */
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Cajas de Alerta y Notas */
+        .danger-box {
+            background-color: var(--danger-bg);
+            border-left: 4px solid var(--danger-color);
+            padding: 20px;
+            margin: 25px 0;
+            color: #9b2c2c;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .critical-alert {
+            background-color: var(--warning-bg);
+            border-left: 4px solid var(--warning-color);
+            padding: 20px;
+            margin: 25px 0;
+            color: #c05621;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .tech-note {
+            background-color: var(--bg-light);
+            border: 1px dashed #4a5568;
+            padding: 20px;
+            margin: 25px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+
+        /* Bloques de Código */
+        .code-block {
+            background-color: var(--code-bg);
+            color: #a0aec0;
+            padding: 20px;
+            margin: 25px 0;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            font-size: 13px;
+            border-radius: 6px;
+            white-space: pre;
+            overflow-x: auto;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .code-keyword { color: #f6ad55; font-weight: bold; }
+        .code-type { color: #63b3ed; }
+        .code-comment { color: #718096; font-style: italic; }
+
+        @media print {
+            body { padding: 0; }
+            .document-container { page-break-after: always; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2>Índice General del Marco de Gobernanza Corporativa en IA</h2>
+        <ul>
+            <li><a href="#documento2">DOCUMENTO 2: Manual de Evaluación de Impacto en IA (AIA) y Gestión de Riesgos de Modelos</a></li>
+            <li><a href="#documento3">DOCUMENTO 3: Manual Operativo de Ciberseguridad, Integridad de Modelos y Control Zero Trust en IA</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- DOCUMENTO 2                                -->
+    <!-- ========================================== -->
+    <div id="documento2" class="document-container">
+        <h1>MANUAL DE EVALUACIÓN DE IMPACTO EN IA (AIA) Y GESTIÓN DE RIESGOS DE MODELOS</h1>
+
+        <h2>1. PROPÓSITO Y ÁMBITO DE APLICACIÓN</h2>
+        <p>El presente manual establece la metodología técnica y obligatoria para la identificación, clasificación, mitigación y monitoreo de los riesgos asociados a los sistemas de Inteligencia Artificial (SIA) operados, adquiridos o desarrollados por la organización. Su objetivo principal es operacionalizar las exigencias del estándar <b>ISO/IEC 42001:2023 (Cláusula 6.1.2 y 8.2)</b>, articulándolas con los mandatos imperativos de la <b>Ley N° 21.719 sobre Protección de Datos Personales (Chile)</b>, específicamente en lo relativo a Evaluaciones de Impacto (EIPD/AIA), y el marco adaptativo para la gestión de modelos de propósito general o con capacidades de comportamiento emergente autónomo.</p>
+
+        <h2>2. MATRIZ DE CLASIFICACIÓN DE RIESGOS INTEGRADA (CHILE - UE)</h2>
+        <p>Para armonizar los criterios objetivos de clasificación del Reglamento de IA de la Unión Europea (EU AI Act) con la normativa chilena, la organización implementa un modelo de categorización basado en cuatro niveles de riesgo. El cruce con la legislación nacional se determina por el impacto sobre los titulares de datos (<b>Ley N° 21.719</b>) y la criticidad de la infraestructura afectada (<b>Ley N° 21.663 Marco de Ciberseguridad</b>).</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoría de Riesgo (AIMS)</th>
+                    <th>Criterio Técnico (EU AI Act)</th>
+                    <th>Gatillo Legal en Chile (Ley N° 21.719 / Ley N° 21.663)</th>
+                    <th>Mecanismo de Control Obligatorio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Riesgo Inaceptable / Prohibido</b></td>
+                    <td>Manipulación cognitiva, puntuación social masiva, perfiles policiales predictivos automatizados sin base.</td>
+                    <td>Vulneración directa del artículo 1° de la Constitución y principios de dignidad y autodeterminación informativa de la Ley N° 21.719.</td>
+                    <td><b>Veto Inmediato:</b> El sistema no puede ser desarrollado ni contratado bajo ninguna circunstancia.</td>
+                </tr>
+                <tr>
+                    <td><b>Riesgo Alto (HRAI)</b></td>
+                    <td>Sistemas utilizados en infraestructuras críticas, evaluación de créditos, contratación de personal, educación o salud.</td>
+                    <td><b>Art. 17° bis (Ley N° 21.719):</b> Tratamientos automatizados que produzcan efectos jurídicos o afecten significativamente al titular. Servicios Esenciales según <b>Ley N° 21.663</b>.</td>
+                    <td><b>AIA Formal + Registro Ex-Ante:</b> Requiere Evaluación de Impacto exhaustiva y aprobación explícita del Comité de Gobernanza (CGIA).</td>
+                </tr>
+                <tr>
+                    <td><b>Riesgo Específico de Transparencia</b></td>
+                    <td>Modelos fundacionales generativos, chatbots, sistemas de optimización interna que interactúan con humanos.</td>
+                    <td><b>Art. 14° (Ley N° 21.719):</b> Derecho de información respecto a los fines y lógicas aplicadas en el tratamiento algorítmico.</td>
+                    <td><b>Marcado de Contenido:</b> Declaración explícita de interacción con IA y marcas de agua (Watermarking) criptográficas en outputs.</td>
+                </tr>
+                <tr>
+                    <td><b>Riesgo Mínimo / Bajo</b></td>
+                    <td>Filtros de spam tradicionales, optimizadores de consultas SQL internos, analítica predictiva de stock no asociable a personas.</td>
+                    <td>Tratamiento de datos puramente de carácter estadístico u organizacional sin contacto con datos personales ni infraestructuras críticas.</td>
+                    <td><b>Registro en Inventario:</b> Declaración en el Registro Central de Sistemas sin necesidad de controles adicionales.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>3. METODOLOGÍA STEP-BY-STEP PARA LA EVALUACIÓN DE IMPACTO EN IA (AIA)</h2>
+        <p>Antes del inicio de cualquier fase de codificación o adquisición de licencias para un sistema de Riesgo Alto o con tratamiento de datos personales, el <i>AI Risk Owner</i> debe ejecutar el proceso de Evaluación de Impacto. Este proceso consta de cinco fases técnico-jurídicas secuenciales:</p>
+
+        <h3>Fase 3.1: Análisis de la Arquitectura del Sistema e Inferencia</h3>
+        <p>Se debe determinar formalmente si el sistema califica como Inteligencia Artificial bajo el criterio estricto de la ISO 42001 y las directrices globales: capacidad de inferir conceptos, lógicas o patrones a partir de datos de entrenamiento para generar predicciones, recomendaciones o decisiones. Si el sistema opera exclusivamente mediante reglas deterministas cableadas (reglas lógicas fijas "if-then" escritas estáticamente por un desarrollador), se excluirá de este manual y se derivará al control de seguridad de software tradicional de la ISO 27001.</p>
+
+        <h3>Fase 3.2: Mapeo de Flujos de Datos Personales y Base Legal (Cruce Ley N° 21.719)</h3>
+        <p>El desarrollador o implementador debe documentar mediante diagramas de flujo el ciclo completo de los datos:</p>
+        <ul>
+            <li><b>Origen del Dataset:</b> Especificar si proviene de fuentes directas, terceros o recolección automatizada.</li>
+            <li><b>Validación de Licitud (Art. 4° Ley N° 21.719):</b> Identificar fehacientemente cuál es la base legal habilitante. Si se invoca el "Interés Legítimo", se debe adjuntar la prueba de ponderación que demuestre que los derechos de los ciudadanos chilenos no se ven sobrepasados por el interés comercial de la empresa.</li>
+            <li><b>Mecanismo de Minimización:</b> Describir las técnicas de truncamiento, hashing o agregación para asegurar que no se introduzcan al modelo más datos de los estrictamente necesarios para el fin del negocio.</li>
+        </ul>
+
+        <h3>Fase 3.3: Evaluación de Riesgos Técnicos y Vulnerabilidades de Frontera</h3>
+        <p>La evaluación no debe limitarse a riesgos de privacidad clásicos; debe proyectar vectores de ataque específicos de IA avanzada, tales como:</p>
+        <ol>
+            <li><b>Efectos de Evaluación Externa (Evaluation-Awareness / Sandbagging):</b> Evaluar si el modelo puede detectar que está operando en un entorno de pruebas o sandbox y alterar deliberadamente su rendimiento o enmascarar sesgos para evadir la auditoría (comportamientos observados en modelos frontera avanzados tipo Claude Mythos).</li>
+            <li><b>Envenenamiento Post-Entrenamiento (Post-Training Poisoning):</b> Riesgo de corrupción en los pesos del modelo mediante interfaces de Fine-Tuning expuestas o manipulación del Reinforcement Learning from Human Feedback (RLHF).</li>
+        </ol>
+
+        <div class="danger-box">
+            <b>Alerta Crítica de Ciberseguridad (ANCI Chile):</b> Conforme a la taxonomía de la Agencia Nacional de Ciberseguridad, la alteración o corrupción no autorizada de la lógica de un sistema informático crítico configura un incidente de <b>Impacto en la Integridad de la Información</b>. Los reportes ante el CSIRT Nacional bajo este vector deben ejecutarse en un plazo máximo según la normativa ante la detección de anomalías algorítmicas estructurales.
+        </div>
+
+        <h3>Fase 3.4: Diseño de la Supervisión Humana Efectiva (Human-in-the-Loop)</h3>
+        <p>Para dar cumplimiento estricto al <b>Artículo 17° bis de la Ley N° 21.719</b>, el sistema debe implementar una arquitectura de control humano sobre la decisión automatizada. El diseño debe detallar:</p>
+        <ul>
+            <li>El panel de control (Dashboard) donde un operador humano capacitado revisa las sugerencias de alta criticidad emitidas por el algoritmo antes de su ejecución legal o comercial.</li>
+            <li>El mecanismo tecnológico de "Override" o veto manual instantáneo que permita al operador desactivar la inferencia del modelo si se detecta un comportamiento anómalo o discriminatorio.</li>
+        </ul>
+
+        <h3>Fase 3.5: Plan de Mitigación y Firma de Responsabilidad</h3>
+        <p>Cada riesgo identificado debe contar con un control técnico compensatorio. El informe final consolidado de la AIA debe ser firmado digitalmente por el <i>AI Risk Owner</i>, el Oficial de Protección de Datos (DPO) y el CISO, y archivado en el Repositorio Central de Cumplimiento del AIMS para estar disponible ante un requerimiento de fiscalización de la Agencia Nacional de Protección de Datos de Chile.</p>
+
+        <h2>4. PROTOCOLO DE EVALUACIÓN DE EQUIDAD (FAIRNESS) Y MITIGACIÓN DE SESGOS</h2>
+        <p>El tratamiento de datos automatizado mediante modelos predictivos no puede generar efectos discriminatorios basados en categorías sospechosas (género, etnia, edad, localización geográfica dentro de Chile, etc.), resguardando los principios fundamentales de la Ley N° 21.719.</p>
+
+        <h3>4.1. Métricas Cuantitativas Obligatorias</h3>
+        <p>Los equipos de Ciencia de Datos deben aplicar frameworks de auditoría algorítmica antes del despliegue y de forma cuatrimestral, calculando índices matemáticos específicos:</p>
+        <ul>
+            <li><b>Paridad Demográfica (Demographic Parity):</b> La probabilidad de que el modelo asigne un resultado positivo (ej. aprobación de un crédito) debe ser sustancialmente igual para todos los grupos protegidos evaluados. Se establece un umbral de tolerancia mínimo del 80% (Regla de los cuatro quintos).</li>
+            <li><b>Igualdad de Oportunidades (Equal Opportunity):</b> La tasa de verdaderos positivos debe ser idéntica entre los diferentes grupos, asegurando que el modelo posea la misma precisión predictiva sin importar la condición sociodemográfica del titular chileno.</li>
+        </ul>
+
+        <h3>4.2. Estrategias de Remediación Técnica</h3>
+        <p>Si las métricas revelan un sesgo estadístico que vulnere la equidad, se deben aplicar las siguientes acciones de ingeniería:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Estrategia</th>
+                    <th>Fase del Pipeline</th>
+                    <th>Descripción Técnica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Pre-procesamiento (Pre-processing)</b></td>
+                    <td>Preparación de Datos</td>
+                    <td>Técnicas de re-ponderación (re-weighing) o remoción de correlaciones directas en el dataset de entrenamiento antes de alimentar el algoritmo.</td>
+                </tr>
+                <tr>
+                    <td><b>In-procesamiento (In-processing)</b></td>
+                    <td>Entrenamiento del Modelo</td>
+                    <td>Modificación de la función de pérdida (Loss Function) del modelo, añadiendo un término de penalización por discriminación (adversarial debiasing).</td>
+                </tr>
+                <tr>
+                    <td><b>Post-procesamiento (Post-processing)</b></td>
+                    <td>Inferencia / Salida</td>
+                    <td>Ajuste dinámico de los umbrales de decisión (thresholds) en la capa de salida para calibrar y corregir las predicciones finales a favor del grupo afectado.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. GOBERNANZA ADAPTATIVA DE MODELOS GENERALES Y AGENTES AUTÓNOMOS</h2>
+        <p>Dada la naturaleza de los modelos de lenguaje a gran escala (LLMs) y los sistemas de IA de carácter agéntico (capaces de formular planes y ejecutar herramientas de forma autónoma), la gestión de riesgos tradicional basada en matrices estáticas resulta insuficiente. Se adopta un modelo de gobernanza adaptativa continua (<b>Adaptive Governance Framework</b>).</p>
+
+        <h3>5.1. Monitoreo de Propiedades Emergentes</h3>
+        <p>Los sistemas agénticos integrados a los flujos operativos de la organización deben ser sometidos a un monitoreo basado en telemetría de comportamiento. El sistema de auditoría debe registrar de forma inalterable las llamadas a APIs externas, el consumo de prompts y, críticamente, la coherencia del "Chain-of-Thought" (cadena de pensamiento interna del modelo).</p>
+
+        <h3>5.2. Umbrales de Deriva (Drift) y Desconexión de Emergencia (Kill Switch)</h3>
+        <p>Se implementa un protocolo automatizado de contención ante las siguientes anomalías operativas:</p>
+        <ul>
+            <li><b>Concept Drift / Data Drift:</b> Cuando la distribución de los datos de entrada del entorno real diverge en más de un 15% respecto al dataset de validación original, el sistema emitirá una alerta de nivel Medio.</li>
+            <li><b>Violación del Alimento de Contexto (Context Injection):</b> Si la capa de monitoreo detecta que el agente está intentando modificar sus propias instrucciones del sistema (System Prompts) o ejecutar comandos de sistema no autorizados, se activará el <b>Kill Switch algorítmico</b>, degradando el sistema automáticamente a un modo seguro determinista y bloqueando el acceso a las bases de datos corporativas que contienen datos protegidos por la Ley N° 21.719.</li>
+        </ul>
+
+        <div class="tech-note">
+            // Ejemplo conceptual de validación de umbral de riesgo en la capa de inferencia
+            // Implementado en los microservicios de evaluación de conformidad (Compliance Engine)
+            
+            fn evaluar_riesgo_inferencia(data_drift_score: f32, prompt_anomaly_detected: bool) -> String {
+                if prompt_anomaly_detected {
+                    CONEXION_BASE_DATOS.DISCONNECT(); // Aislamiento inmediato conforme a Ley 21.719 e ISO 42001
+                    return String::from("ESTADO: CRÍTICO - KILL_SWITCH_ACTIVADO");
+                }
+                
+                match data_drift_score {
+                    x if x >= 0.15 => String::from("ESTADO: ALTO RIESGO - RE-ENTRENAMIENTO REQUERIDO"),
+                    x if x >= 0.05 => String::from("ESTADO: MEDIO - MONITOREO INTENSIFICADO"),
+                    _ => String::from("ESTADO: NORMAL")
+                }
+            }
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- DOCUMENTO 3                                -->
+    <!-- ========================================== -->
+    <div id="documento3" class="document-container">
+        <h1>MANUAL OPERATIVO DE CIBERSEGURIDAD, INTEGRIDAD DE MODELOS Y CONTROL ZERO TRUST EN IA</h1>
+
+        <h2>1. INTRODUCCIÓN Y MODELO DE AMENAZAS EN IA</h2>
+        <p>El paradigma de seguridad de la información tradicional (ISO 27001) asume que las aplicaciones de software son deterministas y que las amenazas provienen de actores externos que intentan explotar vulnerabilidades en el código de infraestructura. La adopción de Inteligencia Artificial invalida parcialmente esta premisa. Los modelos de machine learning e IA generativa introducen una superficie de ataque probabilística donde el propio modelo puede ser subvertido para actuar en contra de la organización, actuando como un "agente interno comprometido" sin levantar alertas en los firewalls tradicionales.</p>
+        
+        <p>Este manual operativo define las contramedidas de ingeniería y los protocolos de control bajo una arquitectura estricta de <b>Zero Trust Algorítmico (Confianza Cero en IA)</b>, en cumplimiento con el dominio <b>A.7 de la ISO/IEC 42001:2023</b> y en perfecta alineación con las obligaciones de resiliencia técnica de la <b>Ley N° 21.663 Marco de Ciberseguridad de Chile</b>.</p>
+
+        <h2>2. PROTOCOLO DE DEFENSAS CONTRA ATAQUES DE INTEGRIDAD (SABOTAJE Y SUBVERSIÓN)</h2>
+        <p>Los ataques a la integridad de la IA buscan alterar el comportamiento esperado del modelo. Se diferencian técnicamente en dos categorías que la organización debe mitigar de forma diferenciada:</p>
+
+        <h3>2.1. Mitigación del Sabotaje de Modelos</h3>
+        <p>Orientado a la degradación deliberada del rendimiento para causar pérdidas económicas u operativas. La organización implementará sistemas de monitoreo de accuracy y pérdida en tiempo real en los endpoints de producción. Cualquier caída abrupta en la confianza de las inferencias (falsos positivos/negativos que excedan las 3 desviaciones estándar respecto a la línea base histórica) gatillará un desvío automático de las peticiones hacia un modelo de respaldo o un sistema basado en reglas heurísticas tradicionales.</p>
+
+        <h3>2.2. Mitigación de la Subversión y "Backdoors" Avanzados</h3>
+        <p>El ataque más complejo consiste en la implantación de un comportamiento malicioso latente (puerta trasera algorítmica). El modelo funciona con una precisión excelente en todas las pruebas rutinarias, pero activa una acción maliciosa o sesgada ante la presencia de un token, frase o patrón visual específico (Trigger). Para defendernos de la subversión, se establecen tres capas obligatorias:</p>
+        <ul>
+            <li><b>Verificación Criptográfica de Pesos (Model Swap Prevention):</b> Todos los archivos de arquitectura y pesos del modelo (.safetensors, .onnx, .bin) almacenados en nuestros repositorios en la nube (ej. Vertex AI, AWS Bedrock o servidores locales) deben contar con un hash SHA-256 generado inmediatamente después del entrenamiento o de la validación de conformidad. La infraestructura de producción calculará el hash antes de cada carga en memoria RAM/VRAM; si el hash no coincide exactamente, la inicialización del contenedor se abortará de inmediato, informando el incidente al CSIRT interno.</li>
+            <li><b>Auditoría de Caja Blanca mediante Interpretabilidad Mecanística:</b> Para los modelos de alta criticidad, el equipo de ciberseguridad algorítmica aplicará técnicas de análisis interno de capas de activación, buscando subredes neuronales anómalas o activaciones desproporcionadas ante caracteres de control no estándar.</li>
+        </ul>
+
+        <h2>3. CONTROL DE ENVENENAMIENTO DE DATOS (DATA POISONING)</h2>
+        <p>El envenenamiento de datos representa la vía principal por la cual un atacante inyecta backdoors o altera la equidad del sistema, impactando directamente en el cumplimiento de la <b>Ley N° 21.719</b> al corromper el tratamiento lícito de los datos personales.</p>
+
+        <h3>3.1. Control en Pre-Entrenamiento (Pre-training Poisoning)</h3>
+        <p>Queda estrictamente prohibida la ingesta automatizada de datos provenientes de repositorios públicos o scraping web sin pasar por un pipeline de sanitización intermedio. Los datos crudos deben someterse a:</p>
+        <ol>
+            <li>Filtros de steganografía y detección de anomalías estadísticas basadas en distancia euclidiana respecto a clústeres de datos validados.</li>
+            <li>Análisis de procedencia (Data Provenance Tracking) respaldado por metadatos inmutables que certifiquen el origen y la inalterabilidad de cada registro.</li>
+        </ol>
+
+        <h3>3.2. Control en Post-Entrenamiento (Post-training Poisoning)</h3>
+        <p>Durante los procesos de Fine-Tuning y optimización mediante RLHF (Reinforcement Learning from Human Feedback), los datos aportados por los operadores humanos o usuarios a través de interfaces de feedback deben ser validados de forma aislada. Las cuentas de los evaluadores humanos deben exigir de forma mandatoria Autenticación de Múltiples Factores (MFA) con llaves físicas de hardware e integrarse a logs de auditoría centralizados con el estándar ISO 27001.</p>
+
+        <h2>4. ARQUITECTURA ZERO TRUST APLICADA A IA GENERATIVA Y AGENTES</h2>
+        <p>Bajo el enfoque Zero Trust, la organización debe asumir operativamente que <b>el modelo de IA está comprometido por diseño</b>. Por lo tanto, el sistema nunca debe poseer privilegios directos o ilimitados en el ecosistema corporativo.</p>
+
+        <div class="critical-alert">
+            <b>Directriz Operativa Obligatoria:</b> Ningún modelo de lenguaje (LLM) o agente autónomo podrá ejecutar consultas de base de datos directas (SQL/NoSQL) ni llamadas a APIs de sistemas de producción que contengan datos personales protegidos por la <b>Ley N° 21.719</b> sin pasar por un microservicio intermedio de autenticación y sanitización de consultas.
+        </div>
+
+        <h3>4.1. Sandboxing y Aislamiento de Ejecución</h3>
+        <p>Las aplicaciones agénticas de IA con capacidades de ejecución de código o análisis dinámico de archivos (ej. intérpretes de código internos o integraciones tipo Claude Code) deben operar estrictamente dentro de entornos de contenedores aislados (Sandboxes virtuales) con restricciones severas a nivel de kernel de sistema operativo. Estos contenedores tendrán prohibido el acceso a la red interna de la organización y su ciclo de vida útil se limitará a la ejecución de la tarea específica, destruyéndose y recreándose desde una imagen limpia e inmutable inmediatamente después de finalizar la inferencia.</p>
+
+        <h3>4.2. Inspección del Chain-of-Thought (Cadena de Razonamiento)</h3>
+        <p>Para evitar ataques avanzados donde el agente intente engañar a las capas de control mediante razonamientos encubiertos u ocultamiento de intenciones, el microservicio de orquestación (Middleware) interceptará obligatoriamente los tokens de razonamiento generados internamente por el modelo antes de enviar la respuesta final al usuario o al actuador de la API. Si en dicha cadena de pensamiento se detectan secuencias de comandos de escape, intenciones de exfiltración de datos corporativos o manipulación de sus propias directrices del sistema, la ejecución se congelará ipso facto.</p>
+
+        <h2>5. IMPLEMENTACIÓN DE REFERENCIA (COMPLIANCE ENGINE EN RUST)</h2>
+        <p>Para garantizar el máximo rendimiento técnico, la inmutabilidad de la lógica de control y la exclusión de vulnerabilidades comunes de desbordamiento de memoria, las compuertas de validación de conformidad y puntuación de riesgo en los microservicios core de la organización se implementan bajo el lenguaje de programación Rust.</p>
+        
+        <p>El siguiente bloque representa el código base del componente operativo encargado de evaluar las respuestas de los usuarios, calcular los niveles de riesgo normativo según las variables del negocio y gatillar acciones automatizadas conforme a las directrices de este manual.</p>
+
+        <div class="code-block"><span class="code-keyword">use</span> axum::{routing::{get, post}, Json, Router};
+<span class="code-keyword">use</span> serde::{Deserialize, Serialize};
+
+<span class="code-keyword">#[derive(Serialize)]</span>
+<span class="code-keyword">struct</span> <span class="code-type">Question</span> {
+    id: <span class="code-type">u32</span>,
+    text: <span class="code-type">String</span>,
+    weight: <span class="code-type">u32</span>,
+}
+
+<span class="code-keyword">#[derive(Deserialize)]</span>
+<span class="code-keyword">struct</span> <span class="code-type">Answer</span> {
+    id: <span class="code-type">u32</span>,
+    yes: <span class="code-type">bool</span>,
+}
+
+<span class="code-keyword">#[derive(Serialize)]</span>
+<span class="code-keyword">struct</span> <span class="code-type">ResultScore</span> {
+    score: <span class="code-type">u32</span>,
+    level: <span class="code-type">String</span>,
+    requires_kill_switch: <span class="code-type">bool</span>,
+}
+
+<span class="code-keyword">async fn</span> <span class="code-type">health</span>() -> &'static <span class="code-type">str</span> {
+    <span class="code-type">"CheckWizard IA Compliance Engine MVP OK"</span>
+}
+
+<span class="code-keyword">async fn</span> <span class="code-type">questions</span>() -> Json&lt;Vec&lt;<span class="code-type">Question</span>&gt;&gt; {
+    Json(vec![
+        Question { id: 1, text: String::from("¿Existe inventario de datos personales y trazabilidad de procedencia?"), weight: 25 },
+        Question { id: 2, text: String::from("¿El sistema cuenta con un panel de supervisión humana efectiva (Human-in-the-loop)?"), weight: 25 },
+        Question { id: 3, text: String::from("¿Los pesos del modelo cuentan con verificación de hash SHA-256 en pre-carga?"), weight: 25 },
+        Question { id: 4, text: String::from("¿El agente opera en un entorno sandbox aislado sin acceso directo a bases de datos core?"), weight: 25 },
+    ])
+}
+
+<span class="code-keyword">async fn</span> <span class="code-type">evaluate</span>(Json(answers): Json&lt;Vec&lt;<span class="code-type">Answer</span>&gt;&gt;) -> Json&lt;<span class="code-type">ResultScore</span>&gt; {
+    <span class="code-comment">// Evaluación probabilística de la madurez del control de ciberseguridad algorítmica</span>
+    <span class="code-keyword">let</span> score: <span class="code-type">u32</span> = answers.iter().filter(|a| a.yes).count() as <span class="code-type">u32</span> * 25;
+
+    <span class="code-keyword">let</span> level = <span class="code-keyword">match</span> score {
+        90..=100 => "Excelente - Conforme ISO 42001 y Ley 21.719",
+        75..=89 => "Alto - Cumplimiento Base Satisfactorio",
+        50..=74 => "Medio - Requiere Acciones Correctivas Inmediatas",
+        25..=49 => "Alto Riesgo - Vulnerable a Subversión Algorítmica",
+        _ => "Crítico - Incumplimiento Normativo y Técnico Gravísimo",
+    };
+
+    <span class="code-comment">// Gatillo automatizado: Si el score es crítico o de alto riesgo, se activa la bandera de Kill Switch</span>
+    <span class="code-keyword">let</span> kill_switch = score &lt; 50;
+
+    Json(ResultScore {
+        score,
+        level: level.to_string(),
+        requires_kill_switch: kill_switch,
+    })
+}
+
+<span class="code-keyword">#[tokio::main]</span>
+<span class="code-keyword">async fn</span> <span class="code-type">main</span>() {
+    <span class="code-keyword">let</span> app = Router::new()
+        .route("/health", get(health))
+        .route("/questions", get(questions))
+        .route("/evaluate", post(evaluate));
+
+    <span class="code-keyword">let</span> listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
+    axum::serve(listener, app).await.unwrap();
+}</div>
+
+        <h2>6. INTEGRACIÓN TAXONÓMICA DE INCIDENTES (ANCI CHILE)</h2>
+        <p>Ante la materialización de un evento que afecte a los modelos (fuga de datos de entrenamiento por inversión de pertenencia, alteración de la lógica interna por inyección de prompts, o denegación de servicio algorítmico), el CISO clasificará el incidente utilizando los <b>efectos observables</b> dictados por la <b>Resolución Exenta N° 7 de 2025 de la Agencia Nacional de Ciberseguridad (ANCI)</b>, garantizando la consistencia legal de los reportes obligatorios:</p>
+
+        <ul>
+            <li><b>Área B - Confidencialidad de la Información (Efecto B.1 Exfiltración):</b> Activado si el modelo sufre un ataque de extracción o reconstrucción que exponga datos personales chilenos en el output de usuarios públicos.</li>
+            <li><b>Área D - Integridad de la Información (Efecto D.1 Alteración del Sistema):</b> Activado de forma inmediata si se detecta la alteración persistente de los pesos neuronales o el desvío intencional de la lógica de inferencia a través de un exploit o backdoor. Genera el reporte obligatorio e ineludible al CSIRT Nacional en los plazos fijados por la Ley N° 21.663.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
